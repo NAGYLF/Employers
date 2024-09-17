@@ -57,16 +57,17 @@ namespace Employers
                     employee.Add(Employes[i]);
                 }
             }
-            Console.WriteLine("legtobbet keresok:");
             Console.WriteLine();
+            Console.WriteLine("legtobbet keresok:");
             foreach (Employee item in employee)
             {
-                Console.WriteLine(item.Name+" "+item.Fizetes);
+                Console.WriteLine(item.Id+" "+item.Name);
             }
         }
 
         static void TizEv_hugdijig()
         {
+            Console.WriteLine();
             Console.WriteLine("akinek 10 ev van a nyugdijig");
             for (int i = 0; i < Employes.Count; i++)
             {
@@ -86,6 +87,7 @@ namespace Employers
                     szam++;
                 }
             }
+            Console.WriteLine();
             Console.WriteLine("50.000 folott keresok szama: "+szam);
         }
     }
