@@ -22,17 +22,19 @@ namespace Employers
 
             }
             sr.Close();
+            nevek_kiiratasa();
+            legtobbet_kereseok();
+            TizEv_hugdijig();
+            felett_keresnek();
+            Console.Read();
 
+        }
+        static void nevek_kiiratasa()
+        {
             for (int i = 0; i < Employes.Count; i++)
             {
                 Console.WriteLine(Employes[i].Name);
             }
-
-
-
-  
-
-
         }
         static void legtobbet_kereseok()
         {
@@ -52,7 +54,8 @@ namespace Employers
                 }
             }
             Console.WriteLine("legtobbet keresok:");
-            foreach (Employee item in Employes)
+            Console.WriteLine();
+            foreach (Employee item in employee)
             {
                 Console.WriteLine(item.Name+" "+item.Fizetes);
             }
