@@ -71,9 +71,9 @@ namespace Employers
             Console.WriteLine("akinek 10 ev van a nyugdijig");
             for (int i = 0; i < Employes.Count; i++)
             {
-                if (Employes[i].Kor>=55)
+                if (Employes[i].Kor==55)
                 {
-                    Console.WriteLine(Employes[i].Name);
+                    Console.WriteLine(Employes[i].Name+" " + Employes[i].Kor);
                 }
             }
         }
