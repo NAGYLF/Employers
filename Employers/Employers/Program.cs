@@ -10,10 +10,10 @@ namespace Employers
 {
     internal class Program
     {
-        static List<Employee> Employes;
+        public static List<Employee> Employes = new List<Employee>();
         static void Main(string[] args)
         {
-            Employes = new List<Employee>();
+            
             StreamReader sr = new StreamReader("tulajdonsagok_100sor.txt");
             while (!sr.EndOfStream)
             {
@@ -42,6 +42,32 @@ namespace Employers
                 }
             }
             Console.WriteLine("a legtobbet kereso: "+employee.Name+"osszeg: "+employee.Fizetes);
+
+
+        }
+
+        static void TizEv_hugdijig()
+        {
+            Console.WriteLine("akinek 10 ev van a nyugdijig");
+            for (int i = 0; i < Employes.Count; i++)
+            {
+                if (Employes[i].Kor>=55)
+                {
+                    Console.WriteLine(Employes[i].Name);
+                }
+            }
+        }
+        static void felett_keresnek()
+        {
+            int szam = 0;
+            for (int i = 0; i < Employes.Count; i++)
+            {
+                if (Employes[i].Fizetes>50000)
+                {
+                    szam++;
+                }
+            }
+            Console.WriteLine("50.000 folott keresok szama: "+szam);
         }
     }
 
