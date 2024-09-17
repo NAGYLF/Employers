@@ -13,7 +13,17 @@ namespace Employers
         public static List<Employee> Employes = new List<Employee>();
         static void Main(string[] args)
         {
-            
+            beolvasas();
+
+            nevek_kiiratasa();
+            legtobbet_kereseok();
+            TizEv_hugdijig();
+            OtvenEzer_felett_keresnek();
+            Console.Read();
+
+        }
+        static void beolvasas()
+        {
             StreamReader sr = new StreamReader("tulajdonsagok_100sor.txt");
             while (!sr.EndOfStream)
             {
@@ -22,12 +32,6 @@ namespace Employers
 
             }
             sr.Close();
-            nevek_kiiratasa();
-            legtobbet_kereseok();
-            TizEv_hugdijig();
-            felett_keresnek();
-            Console.Read();
-
         }
         static void nevek_kiiratasa()
         {
@@ -72,7 +76,7 @@ namespace Employers
                 }
             }
         }
-        static void felett_keresnek()
+        static void OtvenEzer_felett_keresnek()
         {
             int szam = 0;
             for (int i = 0; i < Employes.Count; i++)
