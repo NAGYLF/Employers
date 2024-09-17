@@ -30,20 +30,32 @@ namespace Employers
 
 
 
-            Employee employee = Employes[0];
+  
 
+
+        }
+        static void legtobbet_kereseok()
+        {
+            List<Employee> employee = new List<Employee>();
+            employee.Add(Employes[0]);
             for (int i = 0; i < Employes.Count; i++)
             {
 
-                if (employee.Fizetes < Employes[i].Fizetes)
+                if (employee[0].Fizetes == Employes[i].Fizetes)
                 {
-                    employee.Fizetes = Employes[i].Fizetes;
-                    employee.Name = Employes[i].Name;
+                    employee.Add(Employes[i]);
+                }
+                else if (employee[0].Fizetes < Employes[i].Fizetes)
+                {
+                    employee.Clear();
+                    employee.Add(Employes[i]);
                 }
             }
-            Console.WriteLine("a legtobbet kereso: "+employee.Name+"osszeg: "+employee.Fizetes);
-
-
+            Console.WriteLine("legtobbet keresok:");
+            foreach (Employee item in Employes)
+            {
+                Console.WriteLine(item.Name+" "+item.Fizetes);
+            }
         }
 
         static void TizEv_hugdijig()
